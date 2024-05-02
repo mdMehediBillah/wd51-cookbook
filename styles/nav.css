@@ -1,0 +1,40 @@
+.nav__section {
+    
+}
+
+.nav__section>li:not(.nav__section-list-item--btn) {
+    display: none;
+}
+
+.nav__selector:has(option[value="spice-rice"]:checked)+.nav__section>[data-type~="spice-rice"] {
+    display: block;
+}
+
+.nav__selector:has(option[value="italian"]:checked)+.nav__section>[data-type~="italy"] {
+    display: block;
+}
+
+.nav__selector:has(option[value="japanese"]:checked)+.nav__section>[data-type~="japan"] {
+    display: block;
+}
+
+.nav__selector:has(option[value="other"]:checked)+.nav__section>[data-type~="other"] {
+    display: block;
+}
+
+.nav__recipe>li:not(.nav__recipe-item--btn) {
+    display: none;
+}
+
+.nav__section:has(#sr-spices:checked) + .nav__recipe>[data-section~="sr-spices"] {
+    display: block;
+}
+
+.nav__section:not(:has(input:checked)) + .nav__recipe>.nav__recipe-item--msg {
+    display: block;
+}
+
+/* temp */
+.nav__section:has(input:not(#sr-spices):checked) + .nav__recipe>:not([data-section]):not(.nav__recipe>.nav__recipe-item--msg) {
+    display: block;
+}
