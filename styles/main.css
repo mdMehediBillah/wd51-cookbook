@@ -1,20 +1,22 @@
 @import url(header.css);
+@import url(right-side.css);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .main-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
 .main-left {
-  background-color: gray;
+  background-color: rgb(238, 238, 238);
 }
-.main-right {
+/* .main-right {
   background-color: gray;
-}
+} */
