@@ -15,7 +15,7 @@
   padding: 0.6rem 0;
 
   i {
-    color: rgb(179, 129, 67);
+    color: rgba(179, 129, 67, 0.6);
     font-size: 1.2rem;
     cursor: pointer;
     transition: 0.3s ease;
@@ -39,7 +39,7 @@
   color: rgb(34, 34, 34);
   padding-top: 0.4rem;
   padding-bottom: 0.2rem;
-  border-bottom: 1px solid rgb(141, 65, 32);
+  border-bottom: 1px solid rgb(172, 92, 58);
 }
 
 .right-sub-title {
