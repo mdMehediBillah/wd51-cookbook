@@ -1,25 +1,178 @@
-.nav__section {
-    
+:root {
+    --bg-clr: #fcfafd;
+    --active-bg-clr: #949fa3;
+    --separator-clr: #e5e3e6;
+    --text-clr: #717173;
+    --active-text-clr: #ffffff;
+    --btn-text-clr: #a09c93;
 }
 
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto 1fr;
+    color: var(--text-clr);
+}
+
+.nav__edit-btn {
+    opacity: 0;
+    margin-inline-end: .3rem;
+    display: grid;
+    place-content: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: none;
+    background-color: #fff6;
+    cursor: pointer;
+    transition: opacity 300ms linear;
+    transition-delay: 2.5s;
+
+    & > div {
+        width: 4px;
+        aspect-ratio: 1;
+        background-color: var(--btn-text-clr);
+        border-radius: 100%;
+        box-shadow: 0 6px 0 var(--btn-text-clr), 0 -6px 0 var(--btn-text-clr);
+    }
+}
+
+:has(>.nav__edit-btn):hover,
+:has(>.nav__edit-btn):focus-within {
+    background-color: #3332;
+
+    & > .nav__edit-btn {
+        opacity: 1;
+        transition-duration: 150ms;
+        transition-delay: 0s;
+    }
+} 
+
+.nav__add-btn {
+    border: none;
+    min-width: 100%;
+    padding: .5rem 1rem;
+    color: var(--btn-text-clr);
+    font-weight: 600;
+    text-align: start;
+    background-color: transparent;
+    border-top: 2px solid var(--separator-clr);
+    border-bottom: 2px solid var(--separator-clr);
+    cursor: pointer;
+    transition: color 200ms linear, background-color 200ms linear;
+
+    &:hover,
+    &:focus {
+        color: color-mix(in hsl, var(--btn-text-clr), black 40%);
+        background-color: #3332;
+    }
+}
+
+.nav__selector {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid var(--separator-clr);
+    border-bottom: 2px solid var(--separator-clr);
+    
+    & select {
+        min-width: 100%;
+        appearance: none;
+        color: inherit;
+        padding: .5em 1rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    & .nav__selector-block {
+        position: relative;
+        flex: 1;
+
+        &::after {
+            position: absolute;
+            pointer-events: none;
+            top: .6rem;
+            right: .6rem;
+            z-index: 100;
+            content: "";
+            display: block;
+            width: .8rem;
+            aspect-ratio: 1;
+            border-bottom: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            rotate: 45deg;    
+        }
+    }
+    
+}
+.nav__section {
+    border-right: 2px solid var(--separator-clr);
+}
+
+.nav__section-list-item {
+    display: flex;
+    align-items: center;
+
+    & > input {
+        display: none;
+    }
+
+    &:has(>input:checked) {
+        background-color: var(--active-bg-clr);
+    }
+
+    & > label {
+        flex: 1;
+        padding: .4rem .8rem;
+        cursor: pointer;
+    }
+}
+
+.nav__recipe-item {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 200ms linear;
+
+    & > a {
+        flex: 1;
+        color: inherit;
+        text-decoration: none;
+        padding: .4rem .8rem;
+    }
+}
+
+
+/* Functional part */
 .nav__section>li:not(.nav__section-list-item--btn) {
     display: none;
 }
 
 .nav__selector:has(option[value="spice-rice"]:checked)+.nav__section>[data-type~="spice-rice"] {
-    display: block;
+    display: flex;
 }
 
 .nav__selector:has(option[value="italian"]:checked)+.nav__section>[data-type~="italy"] {
-    display: block;
+    display: flex;
 }
 
 .nav__selector:has(option[value="japanese"]:checked)+.nav__section>[data-type~="japan"] {
-    display: block;
+    display: flex;
 }
 
 .nav__selector:has(option[value="other"]:checked)+.nav__section>[data-type~="other"] {
-    display: block;
+    display: flex;
 }
 
 .nav__recipe>li:not(.nav__recipe-item--btn) {
@@ -27,14 +180,14 @@
 }
 
 .nav__section:has(#sr-spices:checked) + .nav__recipe>[data-section~="sr-spices"] {
-    display: block;
+    display: flex;
 }
 
 .nav__section:not(:has(input:checked)) + .nav__recipe>.nav__recipe-item--msg {
-    display: block;
+    display: flex;
 }
 
 /* temp */
-.nav__section:has(input:not(#sr-spices):checked) + .nav__recipe>:not([data-section]):not(.nav__recipe>.nav__recipe-item--msg) {
-    display: block;
+.nav__section:has(:not(#sr-spices):checked) + .nav__recipe>:not([data-section]):not(.nav__recipe>.nav__recipe-item--msg) {
+    display: flex;
 }
