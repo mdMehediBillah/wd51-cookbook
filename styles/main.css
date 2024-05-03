@@ -11,13 +11,15 @@
 
 .main-container {
   display: grid;
+
   grid-template-columns: 1fr 2fr;
-  /* gap: 2rem; */
 }
 
+
+
 .main-left {
-  background-color: rgb(238, 238, 238);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: var(--bg-clr, wheat);
 }
-/* .main-right {
-  background-color: gray;
-} */
+

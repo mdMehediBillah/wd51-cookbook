@@ -26,17 +26,18 @@
         <p class="header__counter">725 / recipes</p>
       </header>
       <nav class="nav">
-        <h3>Navigation</h3>
         <div class="nav__selector">
-          <label for="type">Select type of the dishes</label>
-          <select name="type" id="type">
-            <option value="spice-rice">Spice & Rice</option>
-            <option value="italian">Italian dishes</option>
-            <option value="japanese">Japanese dishes</option>
-            <hr>
-            <option value="other">Other</option>
-          </select>
-          <button type="button" class="nav__edit-btn"><span>Edit</span>
+          <label for="type" class="visually-hidden">Select type of the dishes</label>
+          <div class="nav__selector-block">
+            <select name="type" id="type">
+              <option value="spice-rice">Spice & Rice</option>
+              <option value="italian">Italian dishes</option>
+              <option value="japanese">Japanese dishes</option>
+              <hr>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="button" class="nav__edit-btn"><span class="visually-hidden">Edit</span>
             <div></div>
           </button>
         </div>
@@ -45,7 +46,7 @@
             <input type="radio" name="spice-rice" id="sr-salad">
             <label for="sr-salad">salad</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -53,7 +54,7 @@
             <input type="radio" name="spice-rice" id="sr-spices">
             <label for="sr-spices">spices & more</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -61,7 +62,7 @@
             <input type="radio" name="spice-rice" id="sr-rice">
             <label for="sr-rice">rice</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -69,16 +70,16 @@
             <input type="radio" name="spice-rice" id="sr-main-dish">
             <label for="sr-main-dish">main dish</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
 
           <li class="nav__section-list-item" data-type="italy">
-            <input type="radio" name="italy" id="it-salad">
-            <label for="it-salad">salad</label>
+            <input type="radio" name="italy" id="it-lasagna">
+            <label for="it-salad">lasagna</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -86,7 +87,7 @@
             <input type="radio" name="italy" id="it-pizza">
             <label for="it-pizza">pizza</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -94,7 +95,7 @@
             <input type="radio" name="italy" id="it-pasta">
             <label for="it-pasta">pasta</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -102,7 +103,7 @@
             <input type="radio" name="italy" id="it-ice-cream">
             <label for="it-ice-cream">ice cream</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -111,7 +112,7 @@
             <input type="radio" name="italy" id="jp-sushi">
             <label for="jp-sushi">sushi</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -119,7 +120,7 @@
             <input type="radio" name="italy" id="jp-ramen">
             <label for="jp-ramen">ramen</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -127,7 +128,7 @@
             <input type="radio" name="italy" id="jp-tempura">
             <label for="jp-tempura">tempura</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -135,7 +136,7 @@
             <input type="radio" name="italy" id="jp-yakitori">
             <label for="jp-yakitori">yakitori</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -144,7 +145,7 @@
             <input type="radio" name="italy" id="oth-item-1">
             <label for="oth-item-1">item #1</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -152,7 +153,7 @@
             <input type="radio" name="italy" id="oth-item-2">
             <label for="oth-item-2">item #2</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -160,7 +161,7 @@
             <input type="radio" name="italy" id="oth-item-3">
             <label for="oth-item-3">item #3</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -168,7 +169,7 @@
             <input type="radio" name="italy" id="oth-item-4">
             <label for="oth-item-4">item #4</label>
             <button type="button"
-              class="nav__edit-btn"><span>Edit</span>
+              class="nav__edit-btn"><span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
@@ -179,62 +180,62 @@
         </ul>
         <ul class="nav__recipe">
           <li class="nav__recipe-item" data-section="sr-spices"><a href="#">Ginger Garlic Paste</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item" data-section="sr-spices"><a href="#">Hunan Sause</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item" data-section="sr-spices"><a href="#">Pressure Cooker Chickpeas</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item" data-section="sr-spices"><a href="#">Shawarma Spice Blend</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item" data-section="sr-spices"><a href="#">Za'atar</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item"><a href="#">Dish #01</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item"><a href="#">Dish #02</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item"><a href="#">Dish #03</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item"><a href="#">Dish #04</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
           <li class="nav__recipe-item"><a href="#">Dish #05</a>
-            <button type="button">
-              <span>Edit</span>
+            <button type="button" class="nav__edit-btn">
+              <span class="visually-hidden">Edit</span>
               <div></div>
             </button>
           </li>
