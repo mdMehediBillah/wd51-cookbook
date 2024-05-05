@@ -2,6 +2,7 @@
 @import url(header.css);
 @import url(right-side.css);
 @import url(nav.css);
+@import url(table&modal.css);
 
 * {
   padding: 0;
