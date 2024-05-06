@@ -6,19 +6,18 @@
 
 * {
   padding: 0;
-  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
 .main-container {
   display: grid;
-
   grid-template-columns: 1fr 2fr;
 }
 
 
 
 .main-left {
+  container-type: inline-size;
   display: grid;
   grid-template-rows: auto 1fr;
   background-color: var(--bg-clr, wheat);
