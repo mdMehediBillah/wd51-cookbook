@@ -1,1 +1,15 @@
 
+.header {
+    & > h1 {
+        font-style: italic;
+        font-size: 3rem;
+        text-align: center;
+        color: #b38143;
+    }
+
+    & > p {
+        padding-block-end: 1rem;
+        font-size: 1.21rem;
+        text-align: center;
+    }
+}
