@@ -1,6 +1,7 @@
 .recipt-table {
     border-collapse: collapse ;
     width: 100%;
+    margin-bottom: 50px;
   }
   
   .recipt-table td {
@@ -8,36 +9,15 @@
     text-align: left;
     padding: 8px;
   }
+
+  .recipt-table tr:first-child {
+    background-color: rgba(179, 129, 67, 0.6);
+    font-weight: bolder;
+  }
   
   .recipt-table tr:nth-child(even) {
     background-color: rgb(252, 242, 230, 0.8);
   }
-  
-  .recipt-table tr:first-child {
-    background-color: rgba(179, 129, 67, 0.6);
-  }
-  
-#share-button {
-    color: rgba(179, 129, 67, 0.4);
-    background-color: rgb(252, 242, 230);
-    width: 30%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0.4rem;
-    border-radius: 0.4rem;
-    min-width: 36px;
-    text-align: center;
-    border: 0.5px solid brown;
-
-    &:hover {
-        color: rgb(141, 65, 32);
-        scale: 1.2;
-        background-color: rgb(252, 242, 230);
-        box-shadow: 1px 1px 16px rgba(32, 32, 32, 0.4);
-        transition: 0.3s;
-      }
-
-}
 
 .modal {
     display: none;
