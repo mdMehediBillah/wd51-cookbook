@@ -10,8 +10,11 @@
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  
+  @media (width > 520px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 
