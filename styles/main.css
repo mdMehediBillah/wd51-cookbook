@@ -14,8 +14,6 @@
   grid-template-columns: 1fr 2fr;
 }
 
-
-
 .main-left {
   container-type: inline-size;
   display: grid;
@@ -23,3 +21,17 @@
   background-color: var(--bg-clr, wheat);
 }
 
+@media only screen and (max-width: 740px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .right-header {
+    font-size: 1.2rem;
+  }
+
+  .main-right {
+    border-left: none;
+  }
+}
